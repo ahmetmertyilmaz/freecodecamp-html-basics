@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
             <meta charset="utf-8">
-            <title>Cat App</title>
+            <title>Cat Photo App</title>
     </head>
     <body>
             <h1>CatPhotoApp</h1>
@@ -41,18 +41,23 @@
                 <form action="https://freecatphotoapp.com/submit-cat-photo">
                     <fieldset>
                         <legend>Is your cat an indoor or outdoor cat?</legend>
-                      <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor</label>
+                      <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label>
                       <label><input type="radio" id="indoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
                     </fieldset>
                     <fieldset>
                         <legend>What's your cat's personality?</legend>
-                        <input type="checkbox" id="loving"> Loving                        
+                        <input type="checkbox" id="loving" name="personality" checked><label for="loving">Loving</label>
+                        <input type="checkbox" id="lazy" name="personality"><label for="lazy">Lazy</label>
+                        <input type="checkbox" id="energetic" name="personality"><label for="energetic">Energetic</label>                     
                     </fieldset>
                     <input type="text" name="catphotourl" placeholder="cat photo URL" required>
                     <button type="submit">Submit</button>
                 </form>
               </section>                          
             </main>
+            <footer>
+              <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+            </footer>
     </body>
 </html>
 <!--    target="_blank" is used to open a link in a new tab.    '-->
@@ -80,5 +85,8 @@
 <!--    value attribute ,If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes.If your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons.For convenience, set the button's value attribute to the same value as its id attribute.-->
 <!--    fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.-->
 <!--    legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.-->
-<!--    to add checkbox, <input type="checkbox"> checkoptionblabla | and add id attribute with value that is option's name-->
-<!--    -->
+<!--    to add checkbox, <input type="checkbox"> checkoptionblabla | and add id attribute with value that is option's name and nest the option in a label element with for attribute ,with the same value of id element in input element.-->
+<!--    In the second fieldset, added name attribute with the value personality so doing this makes it easier for a server to process your web form, especially when there are multiple checkboxes. -->
+<!--    In order to make a checkbox or radio button selected by default, add checked attribute without value in input element-->
+<!--    lang attributed with the value en to the opening html tag is used to specify that the language of the page is English.-->
+<!-- THE END   -->
